@@ -11,7 +11,6 @@ Die Inhalte der einzelnen Vorlesungen werden nachfolgend zusammengefasst.
 
 # Teil A (Einführung in HTML, CSS, Javascript)
 
-# Teil B (Pluto27Web)
 
 ## 06.10.2026
 Einführung
@@ -21,5 +20,8 @@ Einführung
 - Einfache Elements (siehe index.html im entsprechenden commit)
 - Links und Bilder (siehe index.html im entsprechenden commit)
 - Attribute (href, src, width, ...)
+
+
+# Teil B (Pluto27Web)
 
 

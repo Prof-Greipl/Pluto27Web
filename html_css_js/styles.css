@@ -1,0 +1,21 @@
+body {
+  background-color: antiquewhite;
+}
+
+h1 {
+  color: green;
+}
+
+.red_yellow {
+    background-color: yellow;
+    color: red
+}
+
+#p_id {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: chocolate;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    color:white
+}

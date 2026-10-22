@@ -21,6 +21,12 @@ Einführung
 - Links und Bilder (siehe index.html im entsprechenden commit)
 - Attribute (href, src, width, ...)
 
+## 20.10.2026
+- input-Elemente
+- Selektoren
+- styles.css (externe style defs)
+- navbar
+
 
 # Teil B (Pluto27Web)
 

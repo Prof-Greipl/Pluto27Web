@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>JS-Intro</title>
+    </head>
+    <body>
+        <div id="my_text">Text</div>
+        <button id="my_button">Senden</button>
+        <ul id="my_list">
+
+        </ul>
+        <script>
+            let test = document.getElementById("my_text") 
+
+            document.getElementById("my_button")
+            .addEventListener( "click", () => {
+                console.log("You pressed the button.")
+                document.getElementById("my_button").style.display="none" 
+            })
+
+            document.getElementById("my_button")
+            .addEventListener( "mouseenter", () => {
+                console.log("Reingefahren...")
+                let li_element = document.createElement("li")
+                li_element.innerHTML = "Reingefahren" 
+                document.getElementById("my_list").appendChild( li_element )
+            })
+        </script>
+    </body>
+</html>

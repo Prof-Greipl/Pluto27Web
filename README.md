@@ -27,6 +27,11 @@ Einführung
 - styles.css (externe style defs)
 - navbar
 
+## 27.10.2026
+- siehe js/index_teil1.html und js/index_teil2.htlm
+- JS Basics
+- eventlistener, events
+
 
 # Teil B (Pluto27Web)
 

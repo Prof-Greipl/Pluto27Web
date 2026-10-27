@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>JS-Intro</title>
+    </head>
+    <body>
+        <h1>Schau in die Console...</h1>
+        <script>
+            function f(x){
+                return 2*x
+            }
+
+            console.log("Hallo Welt")
+            const a = 1
+            {
+                let i = 5
+                console.log(i)    
+            }
+            if ( a === "1" ) {
+                console.log("if")
+            }
+            else {
+                console.log("else")    
+            }
+            console.log("Wert von a =", a)
+            for ( let i = 1; i < 10; i++){
+                console.log(i)
+            }
+
+            list = [1,2,"Huber", ["A","b","c"]]
+            list.forEach( (element) => {
+                console.log("Listeeneintrag :", element)
+            });
+            console.log( f (14 ) )
+        </script>
+    </body>
+</html>

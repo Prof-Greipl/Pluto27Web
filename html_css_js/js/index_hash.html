@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>JS-Klassen</title>
+    </head>
+    <body>
+        <button id="bu_ch">Change Hash</button>
+        <a href="#B">Gehe zu B</a>
+        <script>
+            document.getElementById("bu_ch").addEventListener(
+                "click",
+                () => {
+                    location.hash="#A"
+                }
+            )
+
+            window.addEventListener("hashchange", () =>{
+                console.log("New hash = ", window.location.hash)
+            })
+        </script>
+    </body>
+</html>

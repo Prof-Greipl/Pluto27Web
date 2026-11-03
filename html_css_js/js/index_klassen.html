@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>JS-Klassen</title>
+    </head>
+    <body>
+        <h1>Schau in die Console...</h1>
+        <script>
+            person = {
+                name : "Greipl",
+                vorname : "Dieter",
+                greet: function () {
+                    console.log( "Aus greet :", this.vorname)
+                }
+            }
+            console.log( person )
+            console.log( person.name )
+            person.greet()
+        </script>
+    </body>
+</html>

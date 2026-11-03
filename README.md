@@ -32,7 +32,15 @@ Einführung
 - JS Basics
 - eventlistener, events
 
+## 03.11.2026
+- Klassen
+- Hashes
 
 # Teil B (Pluto27Web)
+
+## 03.11
+- index.html
+- navbar
+- areas mit location listener
 
 

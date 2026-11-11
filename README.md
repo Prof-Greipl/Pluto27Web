@@ -43,4 +43,7 @@ Einführung
 - navbar
 - areas mit location listener
 
+## 10.11
+- Navigation mit hashes
+- Start SignInArea
 

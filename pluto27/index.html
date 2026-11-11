@@ -44,15 +44,24 @@
             </dialog>
         </div>
     </nav>
-    <div id="mainArea" class="screen" style="background-color: rgb(36, 142, 32);">
-        <h3>mainArea</h1>
+    <div id="mainArea" class="screen container" style="background-color: rgb(36, 142, 32);">
+        <h1>mainArea</h1>
     </div>
 
-    <div id="signInArea" class="screen" style="background-color: rgb(236, 207, 204);">
-        <h3>signInArea</h1>
+    <div id="signInArea" class="screen container">
+        <h1>SignIn</h1>
+        <input id="si_email" type="email" class="form-control mt-5"
+            placeholder="E-Mail" />
+
+        <input id="si_password" type="password" class="form-control mt-5"
+            placeholder="Password" />
+           
+        <button id="si_bu_sign_in" type="button" class="btn btn-primary mt-5">Sign In</button><br>
+        <button id="si_bu_reset_password" type="button" class="btn btn-secondary mt-5">Reset Password</button>
+
     </div>
 
-    <div id="manageAccountArea" class="screen" style="background-color: rgb(205, 229, 178);">
+    <div id="manageAccountArea" class="screen container" style="background-color: rgb(205, 229, 178);">
         <h3>manageAccountArea</h1>
     </div>
 
@@ -65,7 +74,9 @@
             });
             // Neue Area anzeigen.
             activeScreen = document.querySelector(hash)
-            activeScreen.classList.add("sichtbar")
+            if (activeScreen) {
+                activeScreen.classList.add("sichtbar")
+            }
         }
 
         window.addEventListener("hashchange", () => {
@@ -75,8 +86,8 @@
 
         window.addEventListener("load", () =>{
             // Zeige immer die #mainArea an..
-            location.hash ="#mainArea"
-            showScreen( "#mainArea")
+            location.hash ="#signInArea"
+            showScreen( "#signInArea")
         })
     </script>
 </body>

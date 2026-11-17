@@ -10,8 +10,13 @@
         integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
         crossorigin="anonymous"></script>
     <style>
-        .screen { display : none; }
-        .sichtbar { display: block; }
+        .screen {
+            display: none;
+        }
+
+        .sichtbar {
+            display: block;
+        }
     </style>
 </head>
 
@@ -44,29 +49,74 @@
             </dialog>
         </div>
     </nav>
-    <div id="mainArea" class="screen container" style="background-color: rgb(36, 142, 32);">
-        <h1>mainArea</h1>
+    <div id="mainArea" class="screen container">
+        <h1>Chats</h1>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                aria-describedby="button-addon">
+            <button class="btn-outline theme-secondary input-group-btn" type="button" id="button-addon">
+                Button
+            </button>
+        </div>
+        <button id="area_main_test" type="button" class="btn btn-primary mt-5">Add Chat (Test)
+        </button>
+        <ul class="list-group" id="main_area_post_list"></ul>
     </div>
 
     <div id="signInArea" class="screen container">
         <h1>SignIn</h1>
-        <input id="si_email" type="email" class="form-control mt-5"
-            placeholder="E-Mail" />
+        <input id="si_email" type="email" class="form-control mt-5" placeholder="E-Mail" />
 
-        <input id="si_password" type="password" class="form-control mt-5"
-            placeholder="Password" />
-           
+        <input id="si_password" type="password" class="form-control mt-5" placeholder="Password" />
+
         <button id="si_bu_sign_in" type="button" class="btn btn-primary mt-5">Sign In</button><br>
         <button id="si_bu_reset_password" type="button" class="btn btn-secondary mt-5">Reset Password</button>
-
     </div>
 
-    <div id="manageAccountArea" class="screen container" style="background-color: rgb(205, 229, 178);">
-        <h3>manageAccountArea</h1>
+    <div id="manageAccountArea" class="screen container">
+        <h1>Manage Account</h1>
     </div>
 
+    <dialog class="dialog" id="my_dialog">
+        <div class="dialog-header">
+            <h1 class="dialog-title" id="dia_title">Dialog title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+        </div>
+        <div class="dialog-body">
+            <p id="dia_body">...</p>
+        </div>
+        <div class="dialog-footer">
+            <button type="button" class="btn-solid theme-secondary" data-bs-dismiss="dialog">Close</button>
+        </div>
+    </dialog>
+
+    <template id="main_area_template">
+        <li class="list-group-item">
+            <div>Zeile 1</div>
+            <div>Zeile 2</div>
+        </li>
+    </template>
     <script>
-        function showScreen( hash ){
+        document.getElementById("area_main_test")
+            .addEventListener("click", () => {
+                let li = document.getElementById("main_area_template").content.cloneNode(true)
+                document.getElementById("main_area_post_list").appendChild(li)
+            })
+
+        function display_dialog(title, body) {
+            document.getElementById("dia_title").textContent = title
+            document.getElementById("dia_body").textContent = body
+            document.getElementById("my_dialog").showModal()
+        }
+
+        function showScreen(hash) {
+            // Open Modal if page not implemented - remove later
+            if (hash == "#manageAccountArea") {
+                display_dialog("Info", "Not yet implemented")
+                location.hash = "#mainArea"
+                return
+            }
+
             // Alte Area unsichtbar machen
             elements = document.querySelectorAll('.sichtbar')
             elements.forEach(element => {
@@ -81,13 +131,13 @@
 
         window.addEventListener("hashchange", () => {
             const h = location.hash
-            showScreen( h )
+            showScreen(h)
         })
 
-        window.addEventListener("load", () =>{
+        window.addEventListener("load", () => {
             // Zeige immer die #mainArea an..
-            location.hash ="#signInArea"
-            showScreen( "#signInArea")
+            location.hash = "#mainArea"
+            showScreen("#mainArea")
         })
     </script>
 </body>

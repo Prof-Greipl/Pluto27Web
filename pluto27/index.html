@@ -55,12 +55,13 @@
             <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
                 aria-describedby="button-addon">
             <button class="btn-outline theme-secondary input-group-btn" type="button" id="button-addon">
-                Button
+                Send
             </button>
         </div>
+
+        <ul class="list-group mt-3" id="main_area_post_list" ></ul>
         <button id="area_main_test" type="button" class="btn btn-primary mt-5">Add Chat (Test)
         </button>
-        <ul class="list-group" id="main_area_post_list"></ul>
     </div>
 
     <div id="signInArea" class="screen container">
@@ -92,14 +93,16 @@
 
     <template id="main_area_template">
         <li class="list-group-item">
-            <div>Zeile 1</div>
-            <div>Zeile 2</div>
+            <div id="post_view_line1" class="fw-bold">Zeile 1</div>
+            <div id="post_view_line2">Zeile 2</div>
         </li>
     </template>
     <script>
         document.getElementById("area_main_test")
             .addEventListener("click", () => {
                 let li = document.getElementById("main_area_template").content.cloneNode(true)
+                li.getElementById("post_view_line1").textContent = new Date()
+                li.getElementById("post_view_line2").textContent = new Date()
                 document.getElementById("main_area_post_list").appendChild(li)
             })
 

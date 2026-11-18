@@ -36,14 +36,23 @@ Einführung
 - Klassen
 - Hashes
 
+
+
+
 # Teil B (Pluto27Web)
 
-## 03.11
+## 03.11.2026
 - index.html
 - navbar
 - areas mit location listener
 
-## 10.11
+## 10.11.2026
 - Navigation mit hashes
 - Start SignInArea
+
+## 17.11.2026
+- Template für Posts
+- UI für MainArea und ManageAccount
+- Dialog
+
 
